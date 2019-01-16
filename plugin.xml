@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova.Atmosphere.plugin" version="0.0.1">
+    <name>AtmospherePlugin</name>
+    <js-module name="AtmospherePlugin" src="www/AtmospherePlugin.js">
+        <clobbers target="atmosphereplugin" />
+    </js-module>
+    
+    
+    <dependency id="cordova-plugin-add-swift-support" version="1.7.2" />
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="AtmospherePlugin">
+                <param name="ios-package" value="AtmospherePlugin" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/Bridging-Header.h" />
+        <source-file src="src/ios/AtmospherePlugin.swift" />
+        <!--<source-file src="src/ios/AtmospherePDFViewer.swift" />-->
+        <source-file src="src/ios/AtmosphereExternalWebView.swift" />
+
+        <resource-file src="src/ios/Resources/icon-webview-left.png" />
+        <resource-file src="src/ios/Resources/icon-webview-left@2x.png" />
+        <resource-file src="src/ios/Resources/icon-webview-left@3x.png" />
+
+        <resource-file src="src/ios/Resources/icon-webview-right.png" />
+        <resource-file src="src/ios/Resources/icon-webview-right@2x.png" />
+        <resource-file src="src/ios/Resources/icon-webview-right@3x.png" />
+        
+        <resource-file src="src/ios/Resources/icon-close.png" />
+        <resource-file src="src/ios/Resources/icon-close@2x.png" />
+        <resource-file src="src/ios/Resources/icon-close@3x.png" />
+        
+        <resource-file src="src/ios/Resources/icon-webview-refresh.png" />
+        <resource-file src="src/ios/Resources/icon-webview-refresh@2x.png" />
+        <resource-file src="src/ios/Resources/icon-webview-refresh@3x.png" />
+        
+        <resource-file src="src/ios/Resources/icon-close.svg" />
+        <resource-file src="src/ios/Resources/icon-close.pdf" />
+
+        
+        
+        
+    </platform>
+</plugin>
