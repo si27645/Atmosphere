@@ -196,7 +196,7 @@ class AtmosphereExternalWebView: UIViewController, WKNavigationDelegate {
         let button:UIButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         button.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
         
-        button.imageView?.contentMode = UIView.ContentMode.scaleAspectFill
+       
         
         button.addTarget(self, action: #selector(buttonClose), for: .touchUpInside)
         
